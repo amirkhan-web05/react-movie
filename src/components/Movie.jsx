@@ -10,12 +10,10 @@ function Movie({items}) {
         setModal(true);
     };
     
-    
     const filteredMovie = items.filter(item => {
         return item.title.toLowerCase().includes(search.toLowerCase())
     })
-
-
+    
     return (
         <>
         <input
