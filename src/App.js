@@ -8,8 +8,8 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        await axios.get(`${process.env.API_HOST}`).then(({ data }) => {
-          setMovie(data.cart);
+        await axios.get(`http://localhost:3001/cart`).then(({ data }) => {
+          setMovie(data);
         });
       } catch (e) {
         console.error('Error', e);
