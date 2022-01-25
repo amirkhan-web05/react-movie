@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        await axios.get('http://localhost:3000/db.json').then(({ data }) => {
+        await axios.get(`${process.env.API_HOST}/db.json`).then(({ data }) => {
           setMovie(data.cart);
         });
       } catch (e) {
